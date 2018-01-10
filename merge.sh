@@ -19,7 +19,14 @@ mkdir working1
 for file in ${raw_data_dir}/*R1_001.fastq
   do
 
-usearch10 -fastq_mergepairs ${file} -reverse "${raw_data_dir}/$(basename -s R1_001.fastq ${file})R2_001.fastq" -fastqout "working1/$(basename -s L001_R1_001.fastq "$file")merged.fastq" -fastq_minovlen ${min_overlap} -fastq_minmergelen ${min_len} -fastq_maxdiffs 50 -fastq_pctid 40
+usearch10 -fastq_mergepairs ${file} \
+-reverse "${raw_data_dir}/$(basename -s R1_001.fastq ${file})R2_001.fastq" \
+-fastqout "working1/$(basename -s L001_R1_001.fastq "$file")merged.fastq" \
+-fastq_minovlen ${min_overlap} \
+-fastq_minmergelen ${min_len} \
+-fastq_maxdiffs 50 \
+-fastq_pctid 40 \
+-relabel @
 
   done
 
