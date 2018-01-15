@@ -24,8 +24,6 @@ usearch10 -fastq_mergepairs ${file} \
 -fastqout "working1/$(basename -s L001_R1_001.fastq "$file")merged.fastq" \
 -fastq_minovlen ${min_overlap} \
 -fastq_minmergelen ${min_len} \
--fastq_maxdiffs 50 \
--fastq_pctid 40 \
 -relabel @
 
   done
