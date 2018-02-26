@@ -1,10 +1,10 @@
 #!/bin/bash
 #
-# Require usearch10 to be installed on $PATH or else mod script to specift complete path to usearch10
+# Require usearch10 to be installed on $PATH or else mod script to complete path to usearch10
 #
 # Usage
 #
-# $ filter.sh [input dir-merged data)] [output dir] [error rate:float]
+# $ ./filter.sh [input dir-merged data)] [output dir] [error rate:float]
 #
 ################################################################################
 ################################################################################
